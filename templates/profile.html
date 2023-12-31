@@ -1,0 +1,79 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title> Profile | eBhandar</title>
+{% endblock title %}
+    
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %} ">
+{% endblock style %}
+
+{% block body %}
+
+    <div class="pofile-page-heading">
+        <h2>Profile details</h2>
+    </div>
+    <div class="profile-main-container">
+        <div class="profile-cont-details-divs">
+            <div class="profile-detail-n-edit">
+                <div class="profile-detail-heading">
+                    <h3>Name</h3>
+                    <button style="">Edit</button>
+                </div>
+                <input type="text" id="country" name="country" value="Mithun Rathod" readonly>
+            </div>
+            <div class="profile-detail-n-edit">
+                <div class="profile-detail-heading">
+                    <h3>Mobile Number</h3>
+                    <button style="margin:5px; padding: 4px;">Edit</button>
+                </div>
+                <input type="text" id="country" name="country" value="421" readonly>
+            </div>
+            <div class="profile-detail-n-edit">
+                <div class="profile-detail-heading">
+                    <h3>Email</h3>
+                    <button style="margin:5px; padding: 4px;">Edit</button>
+                </div>
+                <input type="text" id="country" name="country" value="www.comgov.com/http.com" readonly>
+            </div>
+            <div class="profile-detail-n-edit">
+                <div class="profile-detail-heading">
+                    <h3>Password</h3>
+                    <button style="margin:5px; padding: 4px;">Edit</button>
+                </div>
+
+                <p>*******</p>
+            </div>
+        </div>
+
+        <div class="profile-cont-buttons">
+            <div class="profile-other-ops-btn">
+                <button>
+                    Profile
+                </button>
+            </div>
+            <div class="profile-other-ops-btn">
+                <button onclick="window.location.href='{% url 'address' %}'">
+                    Addresses
+                </button>
+            </div>
+            <div class="profile-other-ops-btn">
+                <button>
+                    Payments
+                </button>
+            </div>
+            <div class="profile-other-ops-btn">
+                <button>
+                    Wishlist
+                </button>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
+
+{% block script %}
+
+{% endblock script %}

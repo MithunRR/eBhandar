@@ -1,0 +1,51 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title> Addresses | eBhandar</title>
+{% endblock title %}
+    
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/addresses.css' %} ">
+{% endblock style %}
+
+{% block body %}
+    <div class="address-main-sec">
+        <h1>Addresses</h1>
+        <div class="address-edit-add-new">
+            <button class="address-addresses">
+                <div class="add-new-btn">
+                    <h3>+ Add New Address</h3>
+                </div>
+            </button>
+            <div class="address-addresses">
+                <div class="address-edit-remove">
+                    <p><input type="radio" id="home" name="set_add_as_def" value="Home"> Home</p>
+                    <div class="add-edit-remove-btn">
+                        <button class="add-edit-btn">Edit</button>
+                        <button class="add-remove-btn">Remove</button>
+                    </div>
+                </div>
+                <h4>Mithun Rathod - 7777777777</h4>
+                <p>Near Poorna Aqua, Patel Nagar, Lonar, Maharashtra, 443302</p>
+            </div>
+            <div class="address-addresses">
+                <div class="address-edit-remove">
+                    <p><input type="radio" id="office" name="set_add_as_def" value="Office"> Office</p>
+                    <div class="add-edit-remove-btn">
+                        <button class="add-edit-btn">Edit</button>
+                        <button class="add-remove-btn">Remove</button>
+                    </div>
+                </div>
+                <h4>Mithun Rathod - 7777777777</h4>
+                <p>Near Dr. D. Y. Patil Engineering College, Sant Tukaram Nagar, Pimpri, Pune, 411018</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
+
+{% block script %}
+
+{% endblock script %}

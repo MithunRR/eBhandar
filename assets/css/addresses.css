@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.address-main-sec{
+    margin: 100px 5% 20px 5%;
+    padding: 2% 5%;
+    background-color: white;
+    border-radius: 7px;
+}
+.address-main-sec .address-edit-add-new{
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.address-main-sec .address-edit-add-new .address-addresses{
+    width: 29%;
+    padding: 2%;
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: rgb(240, 240, 240);
+}
+.address-addresses .address-edit-remove{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.address-addresses .address-edit-remove p{
+    padding: 3px 6px;
+    background-color: rgb(222, 222, 222);
+    border-radius: 5px;
+}
+.address-edit-remove input:hover{
+    cursor: pointer;
+}
+.address-main-sec button{
+    cursor: pointer;
+}
+.add-edit-remove-btn .add-edit-btn{
+    background-color: rgb(177, 177, 177);
+    padding: 4px 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+
+}
+.add-edit-remove-btn .add-remove-btn{
+    background-color: rgb(255, 55, 55);
+    padding: 4px 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+}

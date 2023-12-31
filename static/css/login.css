@@ -1,0 +1,53 @@
+
+
+.main-login-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 2% 2% 2%;
+    padding: 4%;
+    background-color: #966e50;
+    height: 360px;
+    border-radius: 7px;
+}
+
+.login-datails-div{
+    width: 40%;
+    height: 75%;
+    padding: 5% 2%;
+    background-color: white;
+    border-radius: 5px;
+}
+.login-datails-div h2{
+    font-size: 40px;
+}
+.login-datails-div form input{
+    width: 90%;
+    margin: 10px 0;
+    padding: 4px;
+}
+.login-datails-div form button{
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 3% 0;
+    width: 40%;
+    font-weight: bold;
+    background-color: rgb(255, 188, 62);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.login-datails-div form button:hover{
+    background-color: rgb(255, 197, 91);
+}
+.login-datails-div a:hover{
+    text-decoration: underline;
+}
+
+.login-image-div{
+    width: 50%;
+}
+
+.login-image-div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}

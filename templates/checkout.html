@@ -1,0 +1,124 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title> Checkout | eBhandar</title>
+{% endblock title %}
+    
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/checkout.css' %} ">
+{% endblock style %}
+
+{% block body %}
+
+    <div class="main-checkout-container">
+        <div class="checkout-address-container">
+            <div class="checkout-order-summary">
+                <table>
+                    <tr>
+                        <td class="pr-table-heading">Produst Name</td>
+                        <td class="pr-table-heading">Weight/Unit</td>
+                        <td class="pr-table-heading">Quantity</td>
+                    </tr>
+                    <tr>
+                        <td>1. Banana</td>
+                        <td>500 g</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>2. Apsara Pencil</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>3. Mango</td>
+                        <td>3 kg</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <hr width="70%">
+            <br>
+            <div class="order-addresses-div">
+                <div class="select-address-div">
+                    <form action="#">
+                        <p class="select-address-div-head">Please select your address for delivery-</p>
+                        <div class="checkout-add-label">
+                            <input type="radio" id="address1" name="address" value="address">
+                            <label for="address1">
+                                <div class="checkout-address">
+                                    <p>Opp. Poorna Aqua, Patel Nagar, Lonar, Buldana, Maharashtra, 443302</p>
+                                    <p>Near New Airtel tower</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="checkout-add-label">
+                            <input type="radio" id="address2" name="address" value="address">
+                            <label for="address2">
+                                <div class="checkout-address">
+                                    <p>YCM Road, Sant Tukaram Nagar, Pimpri, Pune, Maharashtra, 411018</p>
+                                    <p>Near Sree Ganesh Mandir</p>
+                                </div>
+                            </label>
+                        </div>
+                        <br>
+                        <button class="checkout-add-new-address">+ Add new address</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout-payment-div">
+            <p>Order Amount Details</p>
+            <hr>
+            <table>
+                <tr>
+                    <td>Produsts-</td>
+                    <td class="td-align-right">&#x20B9;250</td>
+                </tr>
+                <tr>
+                    <td>Delivery-</td>
+                    <td class="td-align-right">&#x20B9;40</td>
+                </tr>
+                <tr>
+                    <td>Total-</td>
+                    <td class="td-align-right">&#x20B9;290</td>
+                </tr>
+                <tr>
+                    <td>Discount-</td>
+                    <td class="td-align-right">- &#x20B9;60</td>
+                </tr>
+                <tr>
+                    <th class="th-align-left">Total-</th>
+                    <th class="td-align-right">&#x20B9;230</th>
+                </tr>
+            </table>
+            <hr>
+            <div class="checkout-select-payment-method">
+                <form action="#">
+                    <p>Select payment method:</p>
+                    <input type="radio" id="upi" name="payment_method" value="UPI">
+                    <label for="upi">UPI</label>
+                    <br>
+                    <input type="radio" id="card" name="payment_method" value="CARD">
+                    <label for="card">Debit Card</label>
+                    <br>
+                    <input type="radio" id="cash-on-delivery" name="payment_method" value="CASH">
+                    <label for="cash">Cash On Delivery</label>
+                </form>
+            </div>
+            <div class="make-payment-btn">
+                <button>Continue Payment</button>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock body %}
+
+{% block script %}
+
+{% endblock script %}

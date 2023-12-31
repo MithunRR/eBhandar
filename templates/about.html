@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title> About | eBhandar</title>
+{% endblock title %}
+    
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %} ">
+{% endblock style %}
+
+{% block body %}
+
+<div class="about-page-container">
+    <div class="main-about-info">
+        <h1 id="main-h1">eBhandar</h1>
+        <p>In Januar 2024, <b>Akanksha Group</b> launched its instant delivery service of grocery and much more
+            things from
+            the toun called <b>eBhandar</b> using web. In early 2024, the company started its first product called
+            <b>eBhandar</b>
+            and operated under <b>Akanksha Group</b> and will be continue launching new...
+        </p>
+        <button onclick="window.location.href='{% url 'index' %}'">Continue Shopping...</button>  
+    </div>
+    <div class="aim-mot-about-cont">
+        <div class="aim-in-about">
+            <h2 id="aim-h1">Our Aim</h2>
+            <p>What's Our Aim?... 
+                Our aim is to provide instant delivery service of any things available in the perticular city
+                including
+                prints and xerox, although its the big and heavy product. There is the option to view and buy
+                products
+                from your favorite store/shop anywhere in the city and also there is the option to ask for anything
+                which is not available on the site...</p>
+            <button>Know More</button>
+        </div>
+        <div class="mot-in-about">
+            <h2 id="mot-h1">Motivation</h2>
+            <p>We are here to help you to get your favorite product from your favorite shop. There are many website
+                which provides delivery services but they have some limitations. In any of those there is no option
+                to
+                order from your favorite nearby shop. We provide the quick delivery of any product available in the
+                city. We are only one who also provides the delivery of prints and Xerox and much more you can
+                imagine...</p>
+            <button>Know More</button>
+        </div>
+    </div>
+</div>
+{% endblock body %}
+
+{% block script %}
+
+{% endblock script %}

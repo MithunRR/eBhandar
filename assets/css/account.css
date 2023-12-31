@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+.account-profile-sec-main{
+    padding: 2% 5%;
+    margin: 100px 5% 20px 5%;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+}
+.account-profile-sec-main h1{
+    margin: 10px;
+    font-size: 35px;
+}
+.account-profile-sec-main .account-sec-profile-order-add{
+    display: flex;
+    justify-content: space-between;
+}
+.account-profile-sec-main .account-sec-profile-order-add button{
+    width: 32%;
+    text-align: left;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+}
+.account-profile-sec-main .account-sec-profile-order-add button:hover{
+    background: linear-gradient(rgb(255, 255, 255), rgb(205, 205, 205));
+}
+
+.account-profile-sec-main .account-sec-pay-wish-review{
+    display: flex;
+    justify-content: space-between;
+}
+.account-profile-sec-main .account-sec-pay-wish-review button{
+    width: 32%;
+    text-align: left;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+}
+.account-profile-sec-main .account-sec-pay-wish-review button:hover{
+    background: linear-gradient(rgb(255, 255, 255), rgb(205, 205, 205));
+}

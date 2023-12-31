@@ -1,0 +1,277 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+
+<!-- category images buttons  -->
+<div class="category-navbar">
+    <div class="nav-cats" id="nav-cat-1">
+        <button><img src="{% static 'images/fashionCat.png' %} " width="100%" alt=""> </button>
+    </div>
+    <div class="nav-cats" id="nav-cat-2">
+        <button><img src="{% static '/images/veg.png' %} " width="100%" alt=""> </button>
+    </div>
+    <div class="nav-cats" id="nav-cat-3">
+        <button><img src="{% static '/images/dailyNeed.png' %} " width="100%" alt=""></button>
+    </div>
+    <div class="nav-cats" id="nav-cat-4">
+        <button><img src="{% static '/images/dryFruits.png' %} " width="100%" alt=""> </button>
+    </div>
+    <div class="nav-cats" id="nav-cat-5">
+        <button><img src="{% static '/images/elec.png' %} " width="100%" alt=""> </button>
+    </div>
+    <div class="nav-cats" id="nav-cat-6">
+        <button><img src="{% static '/images/fruits.png' %} " width="100%" alt=""> </button>
+    </div>
+    <div class="nav-cats" id="nav-cat-7">
+        <button><img src="{% static '/images/furniture.png' %} " width="100%" alt=""> </button>
+    </div>
+    <div class="nav-cats" id="nav-cat-8">
+        <button><img src="{% static '/images/meds.png' %} " width="100%" alt=""> </button>
+    </div>
+    <div class="nav-cats" id="nav-cat-9">
+        <button><img src="{% static '/images/elec.png' %} " width="100%" alt=""> </button>
+    </div>
+    <div class="nav-cats" id="nav-cat-10">
+        <button><img src="{% static '/images/dailyNeed.png' %} " width="100%" alt=""> </button>
+    </div>
+</div>
+
+
+<div class="slideshow-container">
+    {% comment %} {% for banner in o_f %} {% endcomment %}
+    <div class="mySlides fade">
+        <button><img src="{{banner.img.url}}" style="width:100%"></button>
+    </div>
+    {% comment %} {% endfor %} {% endcomment %}
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+
+<!-- Featured products - history and all  -->
+<div class="featured-pr">
+    <div class="featured-pr-special">
+        <h2>&#160;Special deals</h2>
+        <div class="featured-pr-special-flex1">
+            <button onclick="window.open('/templates/productView.html')" class="featured-pr-special-item1">
+                <img src="{% static '/images/almond.jpg' %} " style="width:100%">
+            </button>
+            <button class="featured-pr-special-item2">
+                <img src="{% static '/images/carrot.jpg' %} " style="width:100%">
+            </button>
+        </div>
+        <div class="featured-pr-special-flex2">
+            <button class="featured-pr-special-item3">
+                <img src="{% static '/images/banana.jpg' %} " style="width:100%">
+            </button>
+            <button class="featured-pr-special-item4">
+                <img src="{% static '/images/biscuit.jpg' %} " style="width:100%">
+            </button>
+        </div>
+        <a href="#">See More...</a>
+    </div>
+    <div class="featured-pr-recentHistory">
+        <h2>&#160;Orders History</h2>
+        <div class="featured-pr-recentHistory-flex1">
+            <button class="featured-pr-recentHistory-item1">
+                <img src="{% static '/images/gr-b.jpg' %} " style="width:100%">
+            </button>
+            <button class="featured-pr-recentHistory-item2">
+                <img src="{% static '/images/kishmish.jpg' %} " style="width:100%">
+            </button>
+        </div>
+        <div class="featured-pr-recentHistory-flex2">
+            <button class="featured-pr-recentHistory-item3">
+                <img src="{% static '/images/mango.jpg' %} " style="width:100%">
+            </button>
+            <button class="featured-pr-recentHistory-item4">
+                <img src="{% static '/images/methi.jpg' %} " style="width:100%">
+            </button>
+        </div>
+        <a href="#">See More...</a>
+    </div>
+    <div class="featured-pr-yourWishlist">
+        <h2>&#160;Wishlisted</h2>
+        <div class="featured-pr-yourWishlist-flex1">
+            <button class="featured-pr-yourWishlist-item1">
+                <img src="{% static '/images/Strawberry.jpg' %} " style="width:100%">
+            </button>
+            <button class="featured-pr-yourWishlist-item2">
+                <img src="{% static '/images/sugar.webp' %} " style="width:100%">
+            </button>
+        </div>
+        <div class="featured-pr-yourWishlist-flex2">
+            <button class="featured-pr-yourWishlist-item3">
+                <img src="{% static '/images/tfan.jpg' %} " style="width:100%">
+            </button>
+            <button class="featured-pr-yourWishlist-item4">
+                <img src="{% static '/images/trimax.jpg' %} " style="width:100%">
+            </button>
+        </div>
+        <a href="#">See More...</a>
+    </div>
+    <div class="featured-pr-inCart">
+        <h2>&#160;In Cart</h2>
+        <div class="featured-pr-inCart-flex1">
+            <button class="featured-pr-inCart-item1">
+                <img src="{% static '/images/tv1.jpg' %} " style="width:100%">
+            </button>
+            <button class="featured-pr-inCart-item2">
+                <img src="{% static '/images/oven.webp' %} " style="width:100%">
+            </button>
+        </div>
+        <div class="featured-pr-inCart-flex2">
+            <button class="featured-pr-inCart-item3">
+                <img src="{% static '/images/pista.png' %} " style="width:100%">
+            </button>
+            <button class="featured-pr-inCart-item4">
+                <img src="{% static '/images/fan.jpg' %} " style="width:100%">
+            </button>
+        </div>
+        <a href="">See More...</a>
+    </div>
+</div>
+
+
+<!-- Sponsored ads and banners -->
+
+<div class="deals-offers-container">
+    <div class="deals-big-div">
+        <button>
+            <div class="main-deal">
+                <!-- <img src="{% static 'img/Strawberry.jpg' %}" alt=""> -->
+                <!-- <h3>OFFER*</h3>
+      <h5>get 40% off on Vegetables</h5> -->
+            </div>
+        </button>
+    </div>
+    <div class="deals-small-divs">
+        <div class="sub-deal1">
+            <button>
+                <!-- <img src="{% static 'img/banana.jpg' %}" alt=""> -->
+            </button>
+        </div>
+        <div class="sub-deal2">
+            <button>
+                <!-- <img src="{% static 'img/pista.png' %}" alt=""> -->
+            </button>
+        </div>
+        <div class="sub-deal3">
+            <div class="deal3-one">
+                <button>
+                    <!-- <img src="{% static 'img/potato.jpg' %}" alt=""> -->
+                </button>
+            </div>
+            <div class="deal3-two">
+                <button>
+
+                    <!-- <img src="{% static 'img/potato.jpg' %}" alt=""> -->
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="container">
+    <div id="slider-container">
+        <h2>Inspired by your Orders</h2>
+        <span onclick="slideRight()" class="btn"></span>
+        <div id="slider">
+            <div class="slide">
+                <div class="card_prod">
+                    <button onclick="window.location.href='{% url 'productView' %}'" class="slider-img-btn"><img src="{% static '/images/tv1.jpg' %}" alt=""></button>
+                    <p><b>Prod Name</b></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rem.</p>
+                    <button class="slider-add-to-cart-btn">Add To Cart</button>
+                    <button class="slider-buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="card_prod">
+                    <button onclick="window.location.href='{% url 'productView' %}'" class="slider-img-btn"><img src="{% static '/images/fan.jpg' %}" alt=""></button>
+                    <p><b>Prod Name</b></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rem.</p>
+                    <button class="slider-add-to-cart-btn">Add To Cart</button>
+                    <button class="slider-buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="card_prod">
+                    <button onclick="window.location.href='{% url 'productView' %}'" class="slider-img-btn"><img src="{% static '/images/classmateN.jpg' %}" alt=""></button>
+                    <p><b>Prod Name</b></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rem.</p>
+                    <button class="slider-add-to-cart-btn">Add To Cart</button>
+                    <button class="slider-buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="card_prod">
+                    <button onclick="window.location.href='{% url 'productView' %}'" class="slider-img-btn"><img src="{% static '/images/trimax.jpg' %}" alt=""></button>
+                    <p><b>Prod Name</b></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rem.</p>
+                    <button class="slider-add-to-cart-btn">Add To Cart</button>
+                    <button class="slider-buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="card_prod">
+                    <button onclick="window.location.href='{% url 'productView' %}'" class="slider-img-btn"><img src="{% static '/images/pista.png' %}" alt=""></button>
+                    <p><b>Prod Name</b></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rem.</p>
+                    <button class="slider-add-to-cart-btn">Add To Cart</button>
+                    <button class="slider-buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="card_prod">
+                    <button onclick="window.location.href='{% url 'productView' %}'" class="slider-img-btn"><img src="{% static '/images/pista.png' %}" alt=""></button>
+                    <p><b>Prod Name</b></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rem.</p>
+                    <button class="slider-add-to-cart-btn">Add To Cart</button>
+                    <button class="slider-buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="card_prod">
+                    <button onclick="window.location.href='{% url 'productView' %}'" class="slider-img-btn"><img src="{% static '/images/pista.png' %}" alt=""></button>
+                    <p><b>Prod Name</b></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rem.</p>
+                    <button class="slider-add-to-cart-btn">Add To Cart</button>
+                    <button class="slider-buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="card_prod">
+                    <button onclick="window.location.href='{% url 'productView' %}'" class="slider-img-btn"><img src="{% static '/images/pista.png' %}" alt=""></button>
+                    <p><b>Prod Name</b></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rem.</p>
+                    <button class="slider-add-to-cart-btn">Add To Cart</button>
+                    <button class="slider-buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="card_prod">
+                    <button onclick="window.location.href='{% url 'productView' %}'" class="slider-img-btn"><img src="{% static '/images/pista.png' %}" alt=""></button>
+                    <p><b>Prod Name</b></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rem.</p>
+                    <button class="slider-add-to-cart-btn">Add To Cart</button>
+                    <button class="slider-buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="card_prod">
+                    <button onclick="window.location.href='{% url 'productView' %}'" class="slider-img-btn"><img src="{% static '/images/pista.png' %}" alt=""></button>
+                    <p><b>Prod Name</b></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rem.</p>
+                    <button class="slider-add-to-cart-btn">Add To Cart</button>
+                    <button class="slider-buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <span onclick="slideLeft()" class="btn"></span>
+    </div>
+</div>
+
+{% endblock body %}

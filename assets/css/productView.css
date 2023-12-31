@@ -1,0 +1,65 @@
+
+
+
+.prodView-main {
+  display: flex;
+  justify-content: space-between;
+  width: 96%;
+  margin: 100px 2% 2% 2%;
+  background-color: white;
+  border-radius: 7px;
+}
+
+.prodView-slide-container {
+  position: relative;
+  display: block;
+  width: 46%;
+  margin: 3%;
+}
+
+.slide-images {
+  display: none;
+}
+
+.image-option-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.image-option-column {
+  float: left;
+  width: 16.66%;
+}
+
+.slide-image-option {
+  cursor: pointer;
+}
+
+.active,
+.slide-image-option:hover {
+  opacity: 1;
+}
+
+.prdView-product-desc {
+  width: 50%;
+  margin: 3%;
+}
+
+.proView-btns{
+    margin: 50px 0;
+    padding: 20px 0;
+}
+
+.proView-btns button{
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 3px;
+    opacity: 0.8;
+    font-weight: bold;
+}
+.proView-btns button:hover {
+    opacity: 1;
+}

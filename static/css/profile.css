@@ -1,0 +1,62 @@
+
+.pofile-page-heading{
+    background-color: white;
+    margin: 100px 2% 0 2%;
+    padding: 1% 2% 1% 2%;
+}
+
+.profile-main-container{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 1% 2%;
+    padding: 2%;
+}
+
+.profile-cont-details-divs{
+    /* border: 1px solid black; */
+    width: 70%;
+}
+.profile-detail-n-edit{
+    border: 1px solid black;
+    margin: 0 0 10px 0;
+    padding: 8px;
+}
+.profile-detail-n-edit input{
+    font-size: 18px;
+    width: 90%;
+    padding: 2px 1px;
+    opacity: 0.7;
+}
+
+.profile-detail-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.profile-detail-heading button{
+    margin:5px; 
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.profile-detail-heading button:hover{
+    background-color: rgb(207, 241, 255);
+
+}
+
+
+
+/* Right side buttons  */
+.profile-cont-buttons{
+    width: 28%;
+}
+.profile-other-ops-btn button{
+    width: 100%;
+    height: 70px;
+    margin: 0 0 7px 0;
+    border: 1px solid black;
+    font-weight: bold;
+}
+.profile-other-ops-btn button:hover{
+    background-color: rgb(231, 231, 231);
+}
