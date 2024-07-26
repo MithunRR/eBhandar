@@ -21,187 +21,63 @@
             </div>
             <div class="hr-line"></div>
             <div id="regular-product-container" class="regular-product-container hide-container">
+                {% for prod in regul_cart %}
                 <div class="product-details-mian-div">
                     <div class="product-image-div">
-                        <img src="{% static '/images/apsara.jpg' %}" alt="">
+                        <img src="{{prod.img.url}}" alt="">
                     </div>
                     <div class="product-name-price-details">
-                        <button class="product-name-btn">Apsara Pencil</button>
-                        <p class="product-desc">Color: Black <br> HB</p>
-                        <P class="product-seller-name">Seller : Mithun</P>
+                        <button class="product-name-btn">{{prod.productName}}</button>
+                        {% comment %} <p class="product-desc">Color: Black <br> HB</p> {% endcomment %}
+                        {% comment %} <P class="product-seller-name">Seller : Mithun</P> {% endcomment %}
                         <p class="product-price-n-off">
-                            <del class="product-mrp">&#x20B9; 25</del> &emsp; <Span class="produt-price">&#x20B9; 19</Span>
+                            <Span class="produt-price">&#x20B9; {{prod.price}}</Span> &emsp; <del class="product-mrp">&#x20B9; {{prod.mrp}}</del>
                             &emsp; <span class="percentage-off">- 24% off</span>
                         </p>
                         <div class="quality-remove-btns">
                             <label for="select-product-quantity">Quantity :</label>
                             <select>
-                                <option value="1" selected>1</option>
+                                <option value="{{prod.quantity}}" selected>{{prod.quantity}}</option>
+                                <option value="2">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
                             <div class="remove-btn">
-                                <button class="remove-product-btn">Remove</button>
+                                {% comment %} <a style="color:red; cursor:pointer" href="{% url 'remove_from_cart' item_id=prod.id %}&product_id={{ prod.product.id }}">Delete</a> {% endcomment %}
                             </div>
                         </div>
                     </div>
                 </div>
                 <hr>
-                <div class="product-details-mian-div">
-                    <div class="product-image-div">
-                        <img src="{% static '/images/apsara.jpg' %}" alt="">
-                    </div>
-                    <div class="product-name-price-details">
-                        <button class="product-name-btn">Apsara Pencil</button>
-                        <p class="product-desc">Color: Black <br> HB</p>
-                        <P class="product-seller-name">Seller : Mithun</P>
-                        <p class="product-price-n-off">
-                            <del class="product-mrp">&#x20B9; 25</del> &emsp; <Span class="produt-price">&#x20B9; 19</Span>
-                            &emsp; <span class="percentage-off">- 24% off</span>
-                        </p>
-                        <div class="quality-remove-btns">
-                            <label for="select-product-quantity">Quantity :</label>
-                            <select>
-                                <option value="1" selected>1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                            <div class="remove-btn">
-                                <button class="remove-product-btn">Remove</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="product-details-mian-div">
-                    <div class="product-image-div">
-                        <img src="{% static '/images/apsara.jpg' %}" alt="">
-                    </div>
-                    <div class="product-name-price-details">
-                        <button class="product-name-btn">Apsara Pencil</button>
-                        <p class="product-desc">Color: Black <br> HB</p>
-                        <P class="product-seller-name">Seller : Mithun</P>
-                        <p class="product-price-n-off">
-                            <del class="product-mrp">&#x20B9; 25</del> &emsp; <span class="produt-price">&#x20B9;19</span>
-                            &emsp; <span style="color: rgb(0, 157, 0);" class="product-percentage-off">- 24% off</span>
-                        </p>
-                        <div class="quality-remove-btns">
-                            <label for="select-product-quantity">Quantity :</label>
-                            <select>
-                                <option value="1" selected>1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                            <div class="remove-btn">
-                                <button class="remove-product-btn">Remove</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             <br>
             <div id="instant-product-container" class="instant-product-container">
-                <div class="instant-del-product-div">
-                    <div class="instant-del-img-div">
-                        <img src="{% static '/images/banana.jpg' %} " alt="">
-                    </div>
+                {% for prod in insta_cart %}
+                <div id="instant-del-product-div" class="instant-del-product-div">
+                    <button class="instant-del-img-div">
+                        <img src="{{prod.img.url}}" alt="">
+                    </button>
                     <div class="instant-del-products-desc">
-                        <button class="instant-del-product-name">Banana</button>
-                        <p class="instant-del-product-weihgt">500 g</p>
+                        <button class="instant-del-product-name">{{prod.productName}}</button>
+                        <p class="instant-del-product-weihgt"> 1 kg {{prod.weight}}</p>
                         <p class="instant-del-product-price"><span
-                                class="instant-del-product-real-price">&#x20B9;50</span>&emsp;<del
-                                class="instant-del-product-del-price">&#x20B9;60</del>&emsp;<span
-                                class="instant-del-product-off">&#x20B9;10 Off</span>
+                                class="instant-del-product-real-price">&#x20B9;{{prod.price}}</span>&emsp;<del
+                                class="instant-del-product-del-price">&#x20B9;{{prod.mrp}}</del>&emsp;<span
+                                class="instant-del-product-off">&#x20B9;{{prod.off}} Off</span>
                         </p>
+                        <a style="color:red; cursor:pointer" href="{% url 'remove_from_cart' item_id=prod.id product_id=prod.product.id %}">Delete</a>
                     </div>
                     <div class="instant-del-product-quantity-selector">
-                        <button type="button">
-                            <span>-</span>
-                        </button>
-                        <input type="number" value="1" min="1" max="10" step="1">
-                        <button type="button">
-                            <span>+</span>
-                        </button>
+                        <button onclick="ins_dec_prods()"  id="instant-cat-minus" type="button"> - </button>
+                        <input id="instant-cat-value" type="number" value="{{prod.quantity}}" min="1" max="10" step="1">
+                        <button onclick="ins_inc_prods()" id="instant-cat-plus" type="button"> + </button>
                     </div>
                 </div>
                 <br>
-                <div class="instant-del-product-div">
-                    <div class="instant-del-img-div">
-                        <img src="{% static '/images/banana.jpg' %}" alt="">
-                    </div>
-                    <div class="instant-del-products-desc">
-                        <button class="instant-del-product-name">Banana</button>
-                        <p class="instant-del-product-weihgt">500 g</p>
-                        <p class="instant-del-product-price"><span
-                                class="instant-del-product-real-price">&#x20B9;50</span>&emsp;<del
-                                class="instant-del-product-del-price">&#x20B9;60</del>&emsp;<span
-                                class="instant-del-product-off">&#x20B9;10 Off</span>
-                        </p>
-                    </div>
-                    <div class="instant-del-product-quantity-selector">
-                        <button type="button">
-                            <span>-</span>
-                        </button>
-                        <input type="number" value="1" min="1" max="10" step="1">
-                        <button type="button">
-                            <span>+</span>
-                        </button>
-                    </div>
-                </div>
-                <br>
-                <div class="instant-del-product-div">
-                    <div class="instant-del-img-div">
-                        <img src="{% static '/images/banana.jpg' %}" alt="">
-                    </div>
-                    <div class="instant-del-products-desc">
-                        <button class="instant-del-product-name">Banana</button>
-                        <p class="instant-del-product-weihgt">500 g</p>
-                        <p class="instant-del-product-price"><span
-                                class="instant-del-product-real-price">&#x20B9;50</span>&emsp;<del
-                                class="instant-del-product-del-price">&#x20B9;60</del>&emsp;<span
-                                class="instant-del-product-off">&#x20B9;10 Off</span>
-                        </p>
-                    </div>
-                    <div class="instant-del-product-quantity-selector">
-                        <button type="button">
-                            <span>-</span>
-                        </button>
-                        <input type="number" value="1" min="1" max="10" step="1">
-                        <button type="button">
-                            <span>+</span>
-                        </button>
-                    </div>
-                </div>
-                <br>
-                <div class="instant-del-product-div">
-                    <div class="instant-del-img-div">
-                        <img src="{% static '/images/banana.jpg' %}" alt="">
-                    </div>
-                    <div class="instant-del-products-desc">
-                        <button class="instant-del-product-name">Banana</button>
-                        <p class="instant-del-product-weihgt">500 g</p>
-                        <p class="instant-del-product-price"><span
-                                class="instant-del-product-real-price">&#x20B9;50</span>&emsp;<del
-                                class="instant-del-product-del-price">&#x20B9;60</del>&emsp;<span
-                                class="instant-del-product-off">&#x20B9;10 Off</span>
-                        </p>
-                    </div>
-                    <div class="instant-del-product-quantity-selector">
-                        <button type="button">
-                            <span>-</span>
-                        </button>
-                        <input type="number" value="1" min="1" max="10" step="1">
-                        <button type="button">
-                            <span>+</span>
-                        </button>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             
             <br>

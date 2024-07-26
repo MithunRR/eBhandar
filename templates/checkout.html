@@ -18,24 +18,16 @@
                 <table>
                     <tr>
                         <td class="pr-table-heading">Produst Name</td>
-                        <td class="pr-table-heading">Weight/Unit</td>
                         <td class="pr-table-heading">Quantity</td>
+                        <td class="pr-table-heading">Price</td>
                     </tr>
+                    {% for prod in insta_cart %}
                     <tr>
-                        <td>1. Banana</td>
-                        <td>500 g</td>
-                        <td>2</td>
+                        <td>{{prod.productName}}</td>
+                        <td>{{prod.quantity}}</td>
+                        <td>{{prod.price}}</td>
                     </tr>
-                    <tr>
-                        <td>2. Apsara Pencil</td>
-                        <td>1</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>3. Mango</td>
-                        <td>3 kg</td>
-                        <td>1</td>
-                    </tr>
+                    {% endfor %}
                 </table>
             </div>
             <br>
@@ -111,7 +103,7 @@
                 </form>
             </div>
             <div class="make-payment-btn">
-                <button>Continue Payment</button>
+                <button >Continue Payment</button>
             </div>
         </div>
 

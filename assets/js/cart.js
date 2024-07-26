@@ -1,4 +1,6 @@
 
+// sort prods by reg & ints 
+
 let instantBtn = document.getElementById("instant-del-pro");
 let regularBtn = document.getElementById("regular-del-pro");
 
@@ -26,3 +28,27 @@ function addActiveClReg() {
     instantContHide.classList.add("hide-container");
     instaPriceDetailsHide.classList.add("hide-container");
 }
+
+
+// Inst - inc & dec prods quantity 
+let ins_inp_value = document.getElementById("instant-cat-value");
+let ins_inp_minus = document.getElementById("instant-cat-minus");
+let ins_inp_plus = document.getElementById("instant-cat-plus");
+
+function ins_inc_prods(){
+    if (ins_inp_value.value < 10){
+        ins_inp_value.value = Number(ins_inp_value.value) + 1;
+    }
+}
+
+function ins_dec_prods(){
+    if (ins_inp_value.value > 0){
+        ins_inp_value.value = Number(ins_inp_value.value) - 1;
+    }
+    else if (ins_inp_value.value < 1){
+        let instant_product_div = document.getElementById("instant-del-product-div");
+        instant_product_div.remove();
+    }
+}
+
+

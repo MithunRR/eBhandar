@@ -22,7 +22,7 @@
                     <h3>Name</h3>
                     <button style="">Edit</button>
                 </div>
-                <input type="text" id="country" name="country" value="Mithun Rathod" readonly>
+                <input type="text" id="country" name="country" value="{{user.first_name}} {{user.last_name}}" readonly>
             </div>
             <div class="profile-detail-n-edit">
                 <div class="profile-detail-heading">
@@ -36,7 +36,7 @@
                     <h3>Email</h3>
                     <button style="margin:5px; padding: 4px;">Edit</button>
                 </div>
-                <input type="text" id="country" name="country" value="www.comgov.com/http.com" readonly>
+                <input type="text" id="country" name="country" value="{{user.email}}" readonly>
             </div>
             <div class="profile-detail-n-edit">
                 <div class="profile-detail-heading">
@@ -64,9 +64,14 @@
                     Payments
                 </button>
             </div>
-            <div class="profile-other-ops-btn">
+            <div class="profile-other-ops-btn" onclick="window.location.href='wishlist'">
                 <button>
                     Wishlist
+                </button>
+            </div>
+            <div class="profile-other-ops-btn">
+                <button style="color:red; border:1px solid red; hover:background-color:red" onclick="window.location.href='logout'">
+                    Log Out
                 </button>
             </div>
         </div>

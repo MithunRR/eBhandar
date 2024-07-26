@@ -30,15 +30,23 @@
             <a href="{% url 'index' %}"><img src="{% static 'images/eBhandar.png' %} " alt=""></a>
         </div>
         <button href="#">Shop</button>
-        <form method="get" action="#" role="search">
-            <input type="search" placeholder="!.....Strictly Veg " aria-label="Search" name="search" id="search"/>
+        <form method="get" action="search" role="search">
+            <input type="search" placeholder="!.....Strictly Veg " value="{{search}}" aria-label="Search" name="search" id="search"/>
             <button type="submit">
                 Search
             </button>
         </form>
+        {% if user.is_authenticated %}
+        <button id="show-login-signup-btn" class="tooltip" onclick="window.location.href='{% url "account" %}'"> Hi, {{user.first_name}} 
+        </button>
+        {% else %}
         <button id="show-login-signup-btn" class="tooltip" onclick="window.location.href='{% url "login" %}'">Login
         </button>
-        <button onclick="window.location.href='{% url 'cart' %}'">Cart</button>
+        <button id="show-login-signup-btn" class="tooltip" onclick="window.location.href='{% url "signup" %}'">SignUp
+        </button>
+        {% endif %}
+        
+        <button onclick="window.location.href='/view_cart'">Cart</button>
     </div>
 
     {% block body %}
@@ -84,8 +92,8 @@
                         <li><a href="{% url 'account' %}">Account</a></li>
                         <li><a href="#">Orders</a></li>
                         <li><a href="#">Payments</a></li>
-                        <li><a href="{% url 'productView' %} ">ProdView</a></li>
-                        <li><a href="{% url "search_n_cat" %} ">Search</a></li>
+                        {% comment %} <li><a href="{% url 'productView' %} ">ProdView</a></li> {% endcomment %}
+                        <li><a href="{% url "search" %} ">Search</a></li>
                     </ul>
                 </div>
             </div>

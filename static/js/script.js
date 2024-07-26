@@ -106,11 +106,6 @@ function slideLeft() {
 
 
 
-
-
-
-
-
 // carousa image Slideer  styling
 
 var slideIndex = 1;

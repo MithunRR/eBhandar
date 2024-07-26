@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title> Category | eBhandar</title>
+{% endblock title %}
+    
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/productView.css' %} ">
+{% endblock style %}
+
+{% block body %}
+
+    <div id="container" style="margin-top:100px">
+        <div id="slider-container">
+            <h2>Inspired by your Orders</h2>
+            <span onclick="slideRight()" class="btn"></span>
+            <div id="slider">
+                {% for product in products %}
+                <div class="slide">
+                    <div class="card_prod">
+                        <button onclick="window.location.href='/product/{{product.id}}'" class="slider-img-btn"><img src="{{product.img.url}}" alt=""></button>
+                        <p><b>{{product.productName}}</b></p>
+                        <p><b>&#8377; {{product.price}}</b> &nbsp;<del style="color:green">&#8377;{{product.mrp}}</del></p>
+                        <p>{{product.desc|slice:"0:40"}}...</p>
+                        <button onClick="location.href='/add_to_cart/{{product.id}}'"  class="slider-add-to-cart-btn">Add To Cart</button>
+                        <button class="slider-buy-now-btn">Buy Now</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <span onclick="slideLeft()" class="btn"></span>
+        </div>
+    </div>
+
+    {% endblock body %}
+
+    {% block script %}
+    <script src="{% static '/js/productView.js' %} "></script>
+    {% endblock script %}

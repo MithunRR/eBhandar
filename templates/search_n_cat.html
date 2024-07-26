@@ -15,141 +15,28 @@
     <div class="search-cat-main-container">
         <div class="search-cat-product-div">
             <div class="search-cat-head-sort">
-                <h3>Showing results for Pista (1 - 32 products of 300 products)</h3>
-                <h4>page 1 of 10</h4>
+                <h3>Showing results for Pista (1 - {{n_pr}} products of {{n_pr}} products)</h3>
+                <h4>page 1 of 1</h4>
             </div>
+            {% if products %}
             <div class="search-cat-4-products">
+                {% for prod in products %}
                 <div class="search-cat-product">
-                    <button class="img-btn-from-search-cat" onclick="window.location.href='/templates/productView.html'">
-                        <img src=" {% static '/images/cabbage.jpg' %} " alt="">
+                    <button class="img-btn-from-search-cat" onclick="window.location.href='/product/{{prod.id}}'">
+                        <img src=" {{prod.img.url}}" alt="">
                     </button>
-                    <p><b>Prod name</b></p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <p class="search-cat-product-price"><b>&#x20B9; 200</b> 
-                        <del style="font-size: 12px;" class="search-cat-product-price-del">&#x20B9;240</del> 
+                    <p><b>{{prod.productName}}</b></p>
+                    <p>{{prod.desc|slice:"0:40"}} ...</p>
+                    <p class="search-cat-product-price"><b>&#x20B9; {{prod.price}}</b> 
+                        <del style="font-size: 12px;" class="search-cat-product-price-del">&#x20B9;{{prod.mrp}}</del> 
                         <span style="font-size: 12px; color:green" class="search-cat-off-price">(&#x20B9;40 off)</span>
                     </p>
                     <button class="add-to-cart-from-search-cat">Add To Cart</button>
                     <button class="quick-view-from-search-cat">Buy Now</button>
                 </div>
-                <div class="search-cat-product">
-                    <button class="img-btn-from-search-cat" onclick="window.location.href='/templates/productView.html'">
-                        <img src=" {% static '/images/carrot.jpg' %} " alt="">
-                    </button>
-                    <p><b>Prod name</b></p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <p class="search-cat-product-price"><b>&#x20B9; 200</b> 
-                        <del style="font-size: 12px;" class="search-cat-product-price-del">&#x20B9;240</del> 
-                        <span style="font-size: 12px; color:green" class="search-cat-off-price">(&#x20B9;40 off)</span>
-                    </p>
-                    <button class="add-to-cart-from-search-cat">Add To Cart</button>
-                    <button class="quick-view-from-search-cat">Buy Now</button>
-                </div>
-                <div class="search-cat-product">
-                    <button class="img-btn-from-search-cat" onclick="window.location.href='/templates/productView.html'">
-                        <img src=" {% static '/images/gr-b.jpg' %} " alt="">
-                    </button>
-                    <p><b>Prod name</b></p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <p class="search-cat-product-price"><b>&#x20B9; 200</b> 
-                        <del style="font-size: 12px;" class="search-cat-product-price-del">&#x20B9;240</del> 
-                        <span style="font-size: 12px; color:green" class="search-cat-off-price">(&#x20B9;40 off)</span>
-                    </p>
-                    <button class="add-to-cart-from-search-cat">Add To Cart</button>
-                    <button class="quick-view-from-search-cat">Buy Now</button>
-                </div>
-                <div class="search-cat-product">
-                    <button class="img-btn-from-search-cat" onclick="window.location.href='/templates/productView.html'">
-                        <img src=" {% static '/images/pista.png' %} " alt="">
-                    </button>
-                    <p><b>Prod name</b></p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <p class="search-cat-product-price"><b>&#x20B9; 200</b> 
-                        <del style="font-size: 12px;" class="search-cat-product-price-del">&#x20B9;240</del> 
-                        <span style="font-size: 12px; color:green" class="search-cat-off-price">(&#x20B9;40 off)</span>
-                    </p>
-                    <button class="add-to-cart-from-search-cat">Add To Cart</button>
-                    <button class="quick-view-from-search-cat">Buy Now</button>
-                </div>
-                <div class="search-cat-product">
-                    <button class="img-btn-from-search-cat" onclick="window.location.href='/templates/productView.html'">
-                        <img src=" {% static '/images/almond.jpg' %} " alt="">
-                    </button>
-                    <p><b>Prod name</b></p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <p class="search-cat-product-price"><b>&#x20B9; 200</b> 
-                        <del style="font-size: 12px;" class="search-cat-product-price-del">&#x20B9;240</del> 
-                        <span style="font-size: 12px; color:green" class="search-cat-off-price">(&#x20B9;40 off)</span>
-                    </p>
-                    <button class="add-to-cart-from-search-cat">Add To Cart</button>
-                    <button class="quick-view-from-search-cat">Buy Now</button>
-                </div>
-                <div class="search-cat-product">
-                    <button class="img-btn-from-search-cat" onclick="window.location.href='/templates/productView.html'">
-                        <img src=" {% static '/images/apsara.jpg' %} " alt="">
-                    </button>
-                    <p><b>Prod name</b></p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <p class="search-cat-product-price"><b>&#x20B9; 200</b> 
-                        <del style="font-size: 12px;" class="search-cat-product-price-del">&#x20B9;240</del> 
-                        <span style="font-size: 12px; color:green" class="search-cat-off-price">(&#x20B9;40 off)</span>
-                    </p>
-                    <button class="add-to-cart-from-search-cat">Add To Cart</button>
-                    <button class="quick-view-from-search-cat">Buy Now</button>
-                </div>
-                <div class="search-cat-product">
-                    <button class="img-btn-from-search-cat" onclick="window.location.href='/templates/productView.html'">
-                        <img src=" {% static '/images/cabbage.jpg' %} " alt="">
-                    </button>
-                    <p><b>Prod name</b></p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <p class="search-cat-product-price"><b>&#x20B9; 200</b> 
-                        <del style="font-size: 12px;" class="search-cat-product-price-del">&#x20B9;240</del> 
-                        <span style="font-size: 12px; color:green" class="search-cat-off-price">(&#x20B9;40 off)</span>
-                    </p>
-                    <button class="add-to-cart-from-search-cat">Add To Cart</button>
-                    <button class="quick-view-from-search-cat">Buy Now</button>
-                </div>
-                <div class="search-cat-product">
-                    <button class="img-btn-from-search-cat" onclick="window.location.href='/templates/productView.html'">
-                        <img src=" {% static '/images/carrot.jpg' %} " alt="">
-                    </button>
-                    <p><b>Prod name</b></p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <p class="search-cat-product-price"><b>&#x20B9; 200</b> 
-                        <del style="font-size: 12px;" class="search-cat-product-price-del">&#x20B9;240</del> 
-                        <span style="font-size: 12px; color:green" class="search-cat-off-price">(&#x20B9;40 off)</span>
-                    </p>
-                    <button class="add-to-cart-from-search-cat">Add To Cart</button>
-                    <button class="quick-view-from-search-cat">Buy Now</button>
-                </div>
-                <div class="search-cat-product">
-                    <button class="img-btn-from-search-cat" onclick="window.location.href='/templates/productView.html'">
-                        <img src=" {% static '/images/gr-b.jpg' %} " alt="">
-                    </button>
-                    <p><b>Prod name</b></p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <p class="search-cat-product-price"><b>&#x20B9; 200</b> 
-                        <del style="font-size: 12px;" class="search-cat-product-price-del">&#x20B9;240</del> 
-                        <span style="font-size: 12px; color:green" class="search-cat-off-price">(&#x20B9;40 off)</span>
-                    </p>
-                    <button class="add-to-cart-from-search-cat">Add To Cart</button>
-                    <button class="quick-view-from-search-cat">Buy Now</button>
-                </div>
-                <div class="search-cat-product">
-                    <button class="img-btn-from-search-cat" onclick="window.location.href='/templates/productView.html'">
-                        <img src=" {% static '/images/tv1.jpg' %} " alt="">
-                    </button>
-                    <p><b>Prod name</b></p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <p class="search-cat-product-price"><b>&#x20B9; 200</b> 
-                        <del style="font-size: 12px;" class="search-cat-product-price-del">&#x20B9;240</del> 
-                        <span style="font-size: 12px; color:green" class="search-cat-off-price">(&#x20B9;40 off)</span>
-                    </p>
-                    <button class="add-to-cart-from-search-cat">Add To Cart</button>
-                    <button class="quick-view-from-search-cat">Buy Now</button>
-                </div>
+                {% endfor %}
             </div>
+            {% endif %}
         </div>
 
         <div class="search-cat-filter-div">
